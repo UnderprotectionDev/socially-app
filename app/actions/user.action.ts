@@ -55,7 +55,7 @@ export async function getUserByClerkId(clerkId: string) {
 
 export async function getDbUserId() {
   const { userId: clerkId } = await auth();
-  if (!clerkId) throw new Error("User not authenticated");
+  if (!clerkId) return null;
   const user = await getUserByClerkId(clerkId);
   if (!user) throw new Error("User not found");
   return user.id;
@@ -64,6 +64,8 @@ export async function getDbUserId() {
 export async function getRandomUsers() {
   try {
     const userId = await getDbUserId();
+
+    if (!userId) return [];
 
     const users = await prisma.user.findMany({
       where: {
