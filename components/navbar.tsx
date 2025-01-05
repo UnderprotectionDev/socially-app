@@ -2,7 +2,7 @@ import Link from "next/link";
 import DesktopNavbar from "@/components/desktop-navbar";
 import MobileNavbar from "@/components/mobile-navbar";
 import { currentUser } from "@clerk/nextjs/server";
-import { syncUser } from "@/app/actions/user.action";
+import { syncUser } from "@/actions/user.action";
 
 async function Navbar() {
   const user = await currentUser();

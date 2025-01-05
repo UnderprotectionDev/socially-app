@@ -2,8 +2,8 @@ import CreatePost from "@/components/create-post";
 import WhoToFollow from "@/components/who-to-follow";
 import { currentUser } from "@clerk/nextjs/server";
 import PostCard from "@/components/post-card";
-import { getPosts } from "./actions/post.action";
-import { getDbUserId } from "./actions/user.action";
+import { getPosts } from "../actions/post.action";
+import { getDbUserId } from "../actions/user.action";
 
 export default async function Home() {
   const user = await currentUser();

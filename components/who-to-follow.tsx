@@ -1,5 +1,5 @@
 import React from "react";
-import { getRandomUsers } from "@/app/actions/user.action";
+import { getRandomUsers } from "@/actions/user.action";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";

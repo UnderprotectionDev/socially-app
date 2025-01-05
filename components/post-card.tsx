@@ -5,7 +5,7 @@ import {
   deletePost,
   getPosts,
   toggleLike,
-} from "@/app/actions/post.action";
+} from "@/actions/post.action";
 import { SignInButton, useUser } from "@clerk/nextjs";
 import { useState } from "react";
 import toast from "react-hot-toast";
