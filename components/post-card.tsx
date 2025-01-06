@@ -13,7 +13,7 @@ import { Card, CardContent } from "./ui/card";
 import Link from "next/link";
 import { Avatar, AvatarImage } from "./ui/avatar";
 import { formatDistanceToNow } from "date-fns";
-import { DeleteAlertDialog } from "@/components/delete-alert-dialog";
+import { DeleteAlertDialog } from "./delete-alert-dialog";
 import { Button } from "./ui/button";
 import {
   HeartIcon,

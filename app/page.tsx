@@ -1,9 +1,9 @@
+import { getPosts } from "@/actions/post.action";
+import { getDbUserId } from "@/actions/user.action";
 import CreatePost from "@/components/create-post";
+import PostCard from "@/components/post-card";
 import WhoToFollow from "@/components/who-to-follow";
 import { currentUser } from "@clerk/nextjs/server";
-import PostCard from "@/components/post-card";
-import { getPosts } from "../actions/post.action";
-import { getDbUserId } from "../actions/user.action";
 
 export default async function Home() {
   const user = await currentUser();
@@ -14,6 +14,7 @@ export default async function Home() {
     <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
       <div className="lg:col-span-6">
         {user ? <CreatePost /> : null}
+
         <div className="space-y-6">
           {posts.map((post) => (
             <PostCard key={post.id} post={post} dbUserId={dbUserId} />
